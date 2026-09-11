@@ -13,6 +13,8 @@ graph TD
     %% Definición de Estilos y Fronteras de Confianza
     classDef internet fill:#f9f,stroke:#333,stroke-width:2px;
     classDef secureZone fill:#bbf,stroke:#333,stroke-width:2px;
+
+    Usuario -->|"Envía Credenciales (HTTPS)"| API["⚙️ API"]
     
     %% Actores y Componentes
     Usuario["🌐 Usuario (Navegador/App)"] -->|1. Envía Credenciales (HTTPS)| API["⚙️ API Gateway / Backend"]
