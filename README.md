@@ -1,7 +1,7 @@
 # Modelado de Amenazas: Sistema de Autenticación y API de Usuarios
 
-**Fecha:** 2026-08-31  
-**Versión:** 1.0  
+**Fecha:** 2026-08-31
+**Versión:** 1.0
 **Autores:** [Nombre del Alumno / Equipo]
 
 ## 1. Diagrama de Flujo de Datos (DFD) con Mermaid.js
@@ -16,17 +16,17 @@ graph TD
 
     %% Actores y Componentes
     Usuario["🌐 Usuario (Navegador/App)"] -->|"1. Envía Credenciales (HTTPS)"| API["⚙️ API Gateway / Backend"]
-    Admin["👨‍💻 Administrador de Red"] -->|5. Mantenimiento (SSH)| BD[("🗄️ Base de Datos SQL")]
-    
-    API -->|2. Consulta / Guarda Usuario| BD
-    API -->|3. Valida Token| Auth["🔑 Servicio de Auth Externo (OAuth)"]
-    
+    Admin["🧑‍💻 Administrador de Red"] -->|"5. Mantenimiento (SSH)"| BD[("💾 Base de Datos SQL")]
+
+    API -->|"2. Consulta / Guarda Usuario"| BD
+    API -->|"3. Valida Token"| Auth["🔑 Servicio de Auth Externo (OAuth)"]
+
     %% Fronteras de Confianza
-    subgraph Frontera de Internet (Insegura)
+    subgraph "Frontera de Internet (Insegura)"
         Usuario
     end
-    
-    subgraph Red Interna de la Empresa (Zona Segura)
+
+    subgraph "Red Interna de la Empresa (Zona Segura)"
         API
         BD
         Auth
@@ -35,7 +35,6 @@ graph TD
     %% Aplicar Estilos
     class Usuario internet;
     class API,BD,Auth secureZone;
-
 ```
 
 ## 2. Matriz de Amenazas (Metodología STRIDE)
