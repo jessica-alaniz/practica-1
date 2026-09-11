@@ -14,10 +14,8 @@ graph TD
     classDef internet fill:#f9f,stroke:#333,stroke-width:2px;
     classDef secureZone fill:#bbf,stroke:#333,stroke-width:2px;
 
-    Usuario -->|"Envía Credenciales (HTTPS)"| API["⚙️ API"]
-    
     %% Actores y Componentes
-    Usuario["🌐 Usuario (Navegador/App)"] -->|1. Envía Credenciales (HTTPS)| API["⚙️ API Gateway / Backend"]
+    Usuario["🌐 Usuario (Navegador/App)"] -->|"1. Envía Credenciales (HTTPS)"| API["⚙️ API Gateway / Backend"]
     Admin["👨‍💻 Administrador de Red"] -->|5. Mantenimiento (SSH)| BD[("🗄️ Base de Datos SQL")]
     
     API -->|2. Consulta / Guarda Usuario| BD
