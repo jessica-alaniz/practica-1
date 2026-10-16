@@ -1,0 +1,12 @@
+name: Practica DevSecOps Hola Mundo
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ejecutar script de prueba
+        run: echo "HOLA MUNDO"
